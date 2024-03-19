@@ -8,8 +8,9 @@ function App() {
   //const [searchParams, setSearchParams] = useSearchParams();
 
   const [searchParams] = useSearchParams();
-  const ContName = searchParams.get("ContName");
-  const ContID = searchParams.get("ContID");
+  const contname = searchParams.get("contname");
+  const rw = searchParams.get("rw");
+  const sysid = searchParams.get("sysid");
 
   return (
     <div className="container-fluid">
@@ -22,8 +23,9 @@ function App() {
             <div className="col-8">
               <h3>Controller Insight</h3>
               <p></p>
-              {ContName && <p>Controller Name: {ContName}</p>}
-              {ContID && <p>Controller ID: {ContID}</p>}
+              {contname && <p>Controller Name: {contname}</p>}
+              {rw && <p>RobotWare version: {rw}</p>}
+              {sysid && <p>System ID: {sysid}</p>}
             </div>
           </div>
         </div>
